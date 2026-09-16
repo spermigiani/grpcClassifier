@@ -1,0 +1,968 @@
+<alloy builddate="1970-01-01T00:00:00Z">
+
+<instance bitwidth="4" maxseq="4" command="Run busquedaSecuencial lurs 3 default" filename="models/busquedaSecuencial.dals">
+
+<sig label="seq/Int" ID="0" parentID="1" builtin="yes">
+</sig>
+
+<sig label="Int" ID="1" parentID="2" builtin="yes">
+</sig>
+
+<sig label="String" ID="3" parentID="2" builtin="yes">
+</sig>
+
+<sig label="this/Elem" ID="4" parentID="2">
+   <atom label="Elem$0"/>
+   <atom label="Elem$1"/>
+   <atom label="Elem$2"/>
+</sig>
+
+<sig label="this/Seq" ID="5" parentID="2">
+   <atom label="Seq$0"/>
+   <atom label="Seq$1"/>
+   <atom label="Seq$2"/>
+</sig>
+
+<field label="idx" ID="6" parentID="5">
+   <tuple> <atom label="Seq$0"/> <atom label="0"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="1"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="2"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="3"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="5"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="6"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="0"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="1"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="2"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="3"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="5"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="6"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="0"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="1"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="3"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="4"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="5"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="6"/> </tuple>
+   <types> <type ID="5"/> <type ID="1"/> </types>
+</field>
+
+<field label="length" ID="7" parentID="5">
+   <tuple> <atom label="Seq$0"/> <atom label="7"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="7"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="7"/> </tuple>
+   <types> <type ID="5"/> <type ID="1"/> </types>
+</field>
+
+<field label="at" ID="8" parentID="5">
+   <tuple> <atom label="Seq$0"/> <atom label="0"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="1"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="2"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="3"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="4"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="5"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$0"/> <atom label="6"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="0"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="1"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="2"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="3"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="4"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="5"/> <atom label="Elem$1"/> </tuple>
+   <tuple> <atom label="Seq$1"/> <atom label="6"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="0"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="1"/> <atom label="Elem$0"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="2"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="3"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="4"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="5"/> <atom label="Elem$2"/> </tuple>
+   <tuple> <atom label="Seq$2"/> <atom label="6"/> <atom label="Elem$1"/> </tuple>
+   <types> <type ID="5"/> <type ID="1"/> <type ID="4"/> </types>
+</field>
+
+<sig label="this/DYN_Choice_Val0" ID="9" parentID="10" one="yes">
+   <atom label="DYN_Choice_Val0$0"/>
+</sig>
+
+<sig label="this/DYN_Choice_Val1" ID="11" parentID="10" one="yes">
+   <atom label="DYN_Choice_Val1$0"/>
+</sig>
+
+<sig label="this/DYN_choice_Sig" ID="10" parentID="2" abstract="yes">
+</sig>
+
+<sig label="boolean/True" ID="12" parentID="13" one="yes">
+   <atom label="boolean/True$0"/>
+</sig>
+
+<sig label="boolean/False" ID="14" parentID="13" one="yes">
+   <atom label="boolean/False$0"/>
+</sig>
+
+<sig label="boolean/Bool" ID="13" parentID="2" abstract="yes">
+</sig>
+
+<sig label="univ" ID="2" builtin="yes">
+</sig>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000003" ID="15">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000001" ID="16">
+   <tuple> <atom label="DYN_Choice_Val1$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_out_DYN$000003" ID="17">
+   <tuple> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="13"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000009" ID="18">
+   <tuple> <atom label="DYN_Choice_Val1$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_s_DYN$000001" ID="19">
+   <tuple> <atom label="Seq$2"/> </tuple>
+   <types> <type ID="5"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_out_DYN$000004" ID="20">
+   <tuple> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="13"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000004" ID="21">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_elem_DYN$000001" ID="22">
+   <tuple> <atom label="Elem$2"/> </tuple>
+   <types> <type ID="4"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000002" ID="23">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000000" ID="24">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_elem_DYN$000000" ID="25">
+   <tuple> <atom label="Elem$2"/> </tuple>
+   <types> <type ID="4"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_out_DYN$000000" ID="26">
+   <tuple> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="13"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000006" ID="27">
+   <tuple> <atom label="DYN_Choice_Val1$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000007" ID="28">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_i_DYN$000004" ID="29">
+   <tuple> <atom label="1"/> </tuple>
+   <types> <type ID="1"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_i_DYN$000000" ID="30">
+   <tuple> <atom label="-7"/> </tuple>
+   <types> <type ID="1"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_i_DYN$000003" ID="31">
+   <tuple> <atom label="1"/> </tuple>
+   <types> <type ID="1"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000008" ID="32">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_i_DYN$000001" ID="33">
+   <tuple> <atom label="0"/> </tuple>
+   <types> <type ID="1"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_i_DYN$000002" ID="34">
+   <tuple> <atom label="1"/> </tuple>
+   <types> <type ID="1"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_s_DYN$000000" ID="35">
+   <tuple> <atom label="Seq$2"/> </tuple>
+   <types> <type ID="5"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_out_DYN$000001" ID="36">
+   <tuple> <atom label="boolean/False$0"/> </tuple>
+   <types> <type ID="13"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_out_DYN$000002" ID="37">
+   <tuple> <atom label="boolean/True$0"/> </tuple>
+   <types> <type ID="13"/> </types>
+</skolem>
+
+<skolem label="$busquedaSecuencial_DYN_choiceID_DYN$000005" ID="38">
+   <tuple> <atom label="DYN_Choice_Val0$0"/> </tuple>
+   <types> <type ID="10"/> </types>
+</skolem>
+
+<tuples2VarId  reltupleStr="this/Elem[Elem$0]" cnfId="1"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Elem[Elem$1]" cnfId="2"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Elem[Elem$2]" cnfId="3"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq[Seq$0]" cnfId="4"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq[Seq$1]" cnfId="5"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq[Seq$2]" cnfId="6"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -8]" cnfId="7"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -7]" cnfId="8"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -6]" cnfId="9"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -5]" cnfId="10"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -4]" cnfId="11"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -3]" cnfId="12"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -2]" cnfId="13"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, -1]" cnfId="14"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 0]" cnfId="15"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 1]" cnfId="16"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 2]" cnfId="17"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 3]" cnfId="18"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 4]" cnfId="19"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 5]" cnfId="20"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 6]" cnfId="21"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$0, 7]" cnfId="22"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -8]" cnfId="23"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -7]" cnfId="24"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -6]" cnfId="25"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -5]" cnfId="26"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -4]" cnfId="27"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -3]" cnfId="28"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -2]" cnfId="29"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, -1]" cnfId="30"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 0]" cnfId="31"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 1]" cnfId="32"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 2]" cnfId="33"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 3]" cnfId="34"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 4]" cnfId="35"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 5]" cnfId="36"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 6]" cnfId="37"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$1, 7]" cnfId="38"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -8]" cnfId="39"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -7]" cnfId="40"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -6]" cnfId="41"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -5]" cnfId="42"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -4]" cnfId="43"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -3]" cnfId="44"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -2]" cnfId="45"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, -1]" cnfId="46"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 0]" cnfId="47"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 1]" cnfId="48"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 2]" cnfId="49"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 3]" cnfId="50"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 4]" cnfId="51"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 5]" cnfId="52"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 6]" cnfId="53"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.idx[Seq$2, 7]" cnfId="54"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -8]" cnfId="55"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -7]" cnfId="56"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -6]" cnfId="57"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -5]" cnfId="58"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -4]" cnfId="59"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -3]" cnfId="60"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -2]" cnfId="61"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, -1]" cnfId="62"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 0]" cnfId="63"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 1]" cnfId="64"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 2]" cnfId="65"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 3]" cnfId="66"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 4]" cnfId="67"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 5]" cnfId="68"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 6]" cnfId="69"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$0, 7]" cnfId="70"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -8]" cnfId="71"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -7]" cnfId="72"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -6]" cnfId="73"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -5]" cnfId="74"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -4]" cnfId="75"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -3]" cnfId="76"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -2]" cnfId="77"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, -1]" cnfId="78"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 0]" cnfId="79"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 1]" cnfId="80"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 2]" cnfId="81"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 3]" cnfId="82"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 4]" cnfId="83"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 5]" cnfId="84"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 6]" cnfId="85"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$1, 7]" cnfId="86"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -8]" cnfId="87"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -7]" cnfId="88"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -6]" cnfId="89"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -5]" cnfId="90"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -4]" cnfId="91"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -3]" cnfId="92"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -2]" cnfId="93"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, -1]" cnfId="94"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 0]" cnfId="95"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 1]" cnfId="96"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 2]" cnfId="97"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 3]" cnfId="98"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 4]" cnfId="99"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 5]" cnfId="100"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 6]" cnfId="101"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.length[Seq$2, 7]" cnfId="102"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -8, Elem$0]" cnfId="103"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -8, Elem$1]" cnfId="104"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -8, Elem$2]" cnfId="105"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -7, Elem$0]" cnfId="106"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -7, Elem$1]" cnfId="107"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -7, Elem$2]" cnfId="108"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -6, Elem$0]" cnfId="109"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -6, Elem$1]" cnfId="110"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -6, Elem$2]" cnfId="111"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -5, Elem$0]" cnfId="112"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -5, Elem$1]" cnfId="113"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -5, Elem$2]" cnfId="114"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -4, Elem$0]" cnfId="115"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -4, Elem$1]" cnfId="116"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -4, Elem$2]" cnfId="117"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -3, Elem$0]" cnfId="118"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -3, Elem$1]" cnfId="119"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -3, Elem$2]" cnfId="120"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -2, Elem$0]" cnfId="121"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -2, Elem$1]" cnfId="122"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -2, Elem$2]" cnfId="123"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -1, Elem$0]" cnfId="124"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -1, Elem$1]" cnfId="125"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, -1, Elem$2]" cnfId="126"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 0, Elem$0]" cnfId="127"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 0, Elem$1]" cnfId="128"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 0, Elem$2]" cnfId="129"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 1, Elem$0]" cnfId="130"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 1, Elem$1]" cnfId="131"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 1, Elem$2]" cnfId="132"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 2, Elem$0]" cnfId="133"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 2, Elem$1]" cnfId="134"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 2, Elem$2]" cnfId="135"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 3, Elem$0]" cnfId="136"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 3, Elem$1]" cnfId="137"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 3, Elem$2]" cnfId="138"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 4, Elem$0]" cnfId="139"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 4, Elem$1]" cnfId="140"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 4, Elem$2]" cnfId="141"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 5, Elem$0]" cnfId="142"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 5, Elem$1]" cnfId="143"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 5, Elem$2]" cnfId="144"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 6, Elem$0]" cnfId="145"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 6, Elem$1]" cnfId="146"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 6, Elem$2]" cnfId="147"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 7, Elem$0]" cnfId="148"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 7, Elem$1]" cnfId="149"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$0, 7, Elem$2]" cnfId="150"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -8, Elem$0]" cnfId="151"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -8, Elem$1]" cnfId="152"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -8, Elem$2]" cnfId="153"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -7, Elem$0]" cnfId="154"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -7, Elem$1]" cnfId="155"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -7, Elem$2]" cnfId="156"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -6, Elem$0]" cnfId="157"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -6, Elem$1]" cnfId="158"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -6, Elem$2]" cnfId="159"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -5, Elem$0]" cnfId="160"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -5, Elem$1]" cnfId="161"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -5, Elem$2]" cnfId="162"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -4, Elem$0]" cnfId="163"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -4, Elem$1]" cnfId="164"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -4, Elem$2]" cnfId="165"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -3, Elem$0]" cnfId="166"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -3, Elem$1]" cnfId="167"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -3, Elem$2]" cnfId="168"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -2, Elem$0]" cnfId="169"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -2, Elem$1]" cnfId="170"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -2, Elem$2]" cnfId="171"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -1, Elem$0]" cnfId="172"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -1, Elem$1]" cnfId="173"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, -1, Elem$2]" cnfId="174"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 0, Elem$0]" cnfId="175"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 0, Elem$1]" cnfId="176"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 0, Elem$2]" cnfId="177"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 1, Elem$0]" cnfId="178"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 1, Elem$1]" cnfId="179"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 1, Elem$2]" cnfId="180"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 2, Elem$0]" cnfId="181"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 2, Elem$1]" cnfId="182"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 2, Elem$2]" cnfId="183"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 3, Elem$0]" cnfId="184"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 3, Elem$1]" cnfId="185"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 3, Elem$2]" cnfId="186"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 4, Elem$0]" cnfId="187"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 4, Elem$1]" cnfId="188"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 4, Elem$2]" cnfId="189"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 5, Elem$0]" cnfId="190"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 5, Elem$1]" cnfId="191"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 5, Elem$2]" cnfId="192"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 6, Elem$0]" cnfId="193"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 6, Elem$1]" cnfId="194"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 6, Elem$2]" cnfId="195"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 7, Elem$0]" cnfId="196"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 7, Elem$1]" cnfId="197"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$1, 7, Elem$2]" cnfId="198"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -8, Elem$0]" cnfId="199"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -8, Elem$1]" cnfId="200"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -8, Elem$2]" cnfId="201"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -7, Elem$0]" cnfId="202"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -7, Elem$1]" cnfId="203"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -7, Elem$2]" cnfId="204"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -6, Elem$0]" cnfId="205"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -6, Elem$1]" cnfId="206"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -6, Elem$2]" cnfId="207"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -5, Elem$0]" cnfId="208"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -5, Elem$1]" cnfId="209"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -5, Elem$2]" cnfId="210"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -4, Elem$0]" cnfId="211"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -4, Elem$1]" cnfId="212"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -4, Elem$2]" cnfId="213"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -3, Elem$0]" cnfId="214"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -3, Elem$1]" cnfId="215"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -3, Elem$2]" cnfId="216"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -2, Elem$0]" cnfId="217"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -2, Elem$1]" cnfId="218"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -2, Elem$2]" cnfId="219"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -1, Elem$0]" cnfId="220"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -1, Elem$1]" cnfId="221"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, -1, Elem$2]" cnfId="222"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 0, Elem$0]" cnfId="223"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 0, Elem$1]" cnfId="224"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 0, Elem$2]" cnfId="225"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 1, Elem$0]" cnfId="226"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 1, Elem$1]" cnfId="227"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 1, Elem$2]" cnfId="228"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 2, Elem$0]" cnfId="229"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 2, Elem$1]" cnfId="230"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 2, Elem$2]" cnfId="231"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 3, Elem$0]" cnfId="232"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 3, Elem$1]" cnfId="233"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 3, Elem$2]" cnfId="234"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 4, Elem$0]" cnfId="235"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 4, Elem$1]" cnfId="236"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 4, Elem$2]" cnfId="237"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 5, Elem$0]" cnfId="238"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 5, Elem$1]" cnfId="239"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 5, Elem$2]" cnfId="240"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 6, Elem$0]" cnfId="241"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 6, Elem$1]" cnfId="242"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 6, Elem$2]" cnfId="243"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 7, Elem$0]" cnfId="244"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 7, Elem$1]" cnfId="245"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="this/Seq.at[Seq$2, 7, Elem$2]" cnfId="246"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000000[Seq$0]" cnfId="247"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000000[Seq$1]" cnfId="248"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000000[Seq$2]" cnfId="249"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000001[Seq$0]" cnfId="250"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000001[Seq$1]" cnfId="251"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_s_DYN$000001[Seq$2]" cnfId="252"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000000[Elem$0]" cnfId="253"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000000[Elem$1]" cnfId="254"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000000[Elem$2]" cnfId="255"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000001[Elem$0]" cnfId="256"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000001[Elem$1]" cnfId="257"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_elem_DYN$000001[Elem$2]" cnfId="258"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000000[boolean/True$0]" cnfId="259"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000000[boolean/False$0]" cnfId="260"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000001[boolean/True$0]" cnfId="261"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000001[boolean/False$0]" cnfId="262"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000002[boolean/True$0]" cnfId="263"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000002[boolean/False$0]" cnfId="264"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000003[boolean/True$0]" cnfId="265"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000003[boolean/False$0]" cnfId="266"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000004[boolean/True$0]" cnfId="267"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_out_DYN$000004[boolean/False$0]" cnfId="268"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-8]" cnfId="269"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-7]" cnfId="270"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-6]" cnfId="271"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-5]" cnfId="272"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-4]" cnfId="273"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-3]" cnfId="274"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-2]" cnfId="275"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[-1]" cnfId="276"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[0]" cnfId="277"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[1]" cnfId="278"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[2]" cnfId="279"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[3]" cnfId="280"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[4]" cnfId="281"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[5]" cnfId="282"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[6]" cnfId="283"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000000[7]" cnfId="284"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-8]" cnfId="285"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-7]" cnfId="286"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-6]" cnfId="287"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-5]" cnfId="288"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-4]" cnfId="289"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-3]" cnfId="290"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-2]" cnfId="291"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[-1]" cnfId="292"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[0]" cnfId="293"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[1]" cnfId="294"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[2]" cnfId="295"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[3]" cnfId="296"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[4]" cnfId="297"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[5]" cnfId="298"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[6]" cnfId="299"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000001[7]" cnfId="300"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-8]" cnfId="301"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-7]" cnfId="302"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-6]" cnfId="303"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-5]" cnfId="304"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-4]" cnfId="305"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-3]" cnfId="306"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-2]" cnfId="307"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[-1]" cnfId="308"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[0]" cnfId="309"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[1]" cnfId="310"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[2]" cnfId="311"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[3]" cnfId="312"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[4]" cnfId="313"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[5]" cnfId="314"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[6]" cnfId="315"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000002[7]" cnfId="316"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-8]" cnfId="317"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-7]" cnfId="318"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-6]" cnfId="319"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-5]" cnfId="320"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-4]" cnfId="321"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-3]" cnfId="322"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-2]" cnfId="323"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[-1]" cnfId="324"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[0]" cnfId="325"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[1]" cnfId="326"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[2]" cnfId="327"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[3]" cnfId="328"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[4]" cnfId="329"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[5]" cnfId="330"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[6]" cnfId="331"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000003[7]" cnfId="332"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-8]" cnfId="333"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-7]" cnfId="334"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-6]" cnfId="335"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-5]" cnfId="336"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-4]" cnfId="337"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-3]" cnfId="338"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-2]" cnfId="339"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[-1]" cnfId="340"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[0]" cnfId="341"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[1]" cnfId="342"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[2]" cnfId="343"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[3]" cnfId="344"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[4]" cnfId="345"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[5]" cnfId="346"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[6]" cnfId="347"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_i_DYN$000004[7]" cnfId="348"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000000[DYN_Choice_Val0$0]" cnfId="349"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000000[DYN_Choice_Val1$0]" cnfId="350"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000001[DYN_Choice_Val0$0]" cnfId="351"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000001[DYN_Choice_Val1$0]" cnfId="352"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000002[DYN_Choice_Val0$0]" cnfId="353"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000002[DYN_Choice_Val1$0]" cnfId="354"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000003[DYN_Choice_Val0$0]" cnfId="355"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000003[DYN_Choice_Val1$0]" cnfId="356"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000004[DYN_Choice_Val0$0]" cnfId="357"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000004[DYN_Choice_Val1$0]" cnfId="358"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000005[DYN_Choice_Val0$0]" cnfId="359"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000005[DYN_Choice_Val1$0]" cnfId="360"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000006[DYN_Choice_Val0$0]" cnfId="361"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000006[DYN_Choice_Val1$0]" cnfId="362"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000007[DYN_Choice_Val0$0]" cnfId="363"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000007[DYN_Choice_Val1$0]" cnfId="364"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000008[DYN_Choice_Val0$0]" cnfId="365"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000008[DYN_Choice_Val1$0]" cnfId="366"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000009[DYN_Choice_Val0$0]" cnfId="367"> </tuples2VarId>
+
+<tuples2VarId  reltupleStr="$busquedaSecuencial_DYN_choiceID_DYN$000009[DYN_Choice_Val1$0]" cnfId="368"> </tuples2VarId>
+
+</instance>
+
+<source filename="models/busquedaSecuencial.dals" content="/*&#x000a;Ejemplo tomado del paper, adaptado a la sintaxis corriente de DynAlloy,&#x000a;*/&#x000a;open util/boolean&#x000a;&#x000a;sig Elem { }&#x000a;&#x000a;sig Seq {&#x000a;  idx: set Int,&#x000a;  length: Int,&#x000a;  at: idx -&gt; one Elem&#x000a;} {&#x000a;    // Constraints to ensure the sequence is well-formed&#x000a;    all i: idx | i &gt;= 0 and i &lt; length&#x000a;    length = #idx&#x000a;}&#x000a;&#x000a;&#x000a;program busquedaSecuencial[s: Seq, elem: Elem, out: Bool] var [i:Int]{&#x000a;  assume (gte[s.length,0]);&#x000a;  out := False;&#x000a;  i := 0; &#x000a;  while ( i&lt;s.length and   out = boolean/False) do { &#x000a;    if (s.at[i]=elem) {&#x000a;       out := True //pueden checkear un contraejemplo cambiando esta linea por False&#x000a;    };&#x000a;    i:= add[i,1]&#x000a;  } &#x000a;}&#x000a;&#x000a;&#x000a;&#x000a;run busquedaSecuencial"/>
+
+</alloy>

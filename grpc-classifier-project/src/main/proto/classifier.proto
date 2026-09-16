@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package classifier;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.classifier";
+option java_outer_classname = "ClassifierProto";
+
+// A minimal service that accepts a string and returns a classification
+// result string, computed by running the string through every configured
+// Classifier instance on the server.
+service ClassifierService {
+  rpc Classify (ClassifyRequest) returns (ClassifyResponse);
+}
+
+message ClassifyRequest {
+  // The raw string to be classified / validated.
+  string text = 1;
+}
+
+message ClassifyResponse {
+  // Human readable aggregated result.
+  string result = 1;
+
+}

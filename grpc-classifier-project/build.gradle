@@ -1,0 +1,95 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.google.protobuf' version '0.9.4'
+    //A Gradle plugin for collapsing all dependencies and project code into a single Jar file.
+    //id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'com.gradleup.shadow' version '8.3.5'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    grpcVersion = '1.65.1'
+    protobufVersion = '3.25.3'
+}
+
+dependencies {
+    implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-services:${grpcVersion}"
+
+    // javax.annotation.Generated is needed by generated gRPC code on JDK 9+
+    compileOnly "org.apache.tomcat:annotations-api:6.0.53"
+
+    // The external classifier library. 
+    implementation files('libs/classifier.jar')
+    
+
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:${protobufVersion}"
+    }
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+application {
+    mainClass = 'com.example.grpc.server.ClassifierServer'
+    applicationDefaultJvmArgs = [
+        '-Dlog4j.configuration=file:src/main/resources/log4j.properties'
+    ]
+}
+
+// Ensure libs/classifier.jar exists before we try to compile/run against it.
+tasks.named('compileJava') {
+    dependsOn ':checkClassifierJar'
+}
+
+tasks.register('checkClassifierJar') {
+    doLast {
+        def jarFile = file('libs/Classifier.jar')
+        if (!jarFile.exists()) {
+            throw new GradleException(
+                "libs/classifier.jar not found. Build it first, e.g.:\n" +
+                "  cd external-classifier && ./build_jar.sh\n" +
+                "or drop your real classifier.jar into libs/."
+            )
+        }
+    }
+}
+
+shadowJar {
+    archiveBaseName.set('classifier-server')
+    archiveClassifier.set('all')
+    archiveVersion.set(version.toString())
+    mergeServiceFiles()
+}
+
+test {
+    useJUnitPlatform()
+}
