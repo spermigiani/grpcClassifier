@@ -76,8 +76,7 @@ tasks.register('checkClassifierJar') {
         if (!jarFile.exists()) {
             throw new GradleException(
                 "libs/classifier.jar not found. Build it first, e.g.:\n" +
-                "  cd external-classifier && ./build_jar.sh\n" +
-                "or drop your real classifier.jar into libs/."
+                " drop your real classifier.jar into libs/."
             )
         }
     }
