@@ -1,0 +1,13 @@
+.gradle/
+build/
+external-classifier/build/
+
+# Python generated stubs / caches
+python_client/classifier_pb2.py
+python_client/classifier_pb2_grpc.py
+python_client/__pycache__/
+*.pyc
+
+.idea/
+*.iml
+.vscode/
