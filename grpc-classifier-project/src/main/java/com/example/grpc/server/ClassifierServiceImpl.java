@@ -38,7 +38,7 @@ public class ClassifierServiceImpl extends ClassifierServiceGrpc.ClassifierServi
             throw new RuntimeException(e);
         }
 
-        logger.info(() -> "Initialized " + posInstanceToClassify.size() + " Classifier positives instance(s) and " + negInstanceToClassify.size() + " Classifier positives instance(s). ");
+        logger.info(() -> "Initialized " + posInstanceToClassify.size() + " Classifier positives instance(s) and " + negInstanceToClassify.size() + " Classifier negatives instance(s). ");
     }
 
     /**
@@ -81,9 +81,6 @@ public class ClassifierServiceImpl extends ClassifierServiceGrpc.ClassifierServi
         try {
 
             String candidatePC = request.getText();
-            //Analizar tipos de respuesta para cada Classifier:
-            // String respuesta = pos[i].classifyAlloyInstance(text) //llamarlo candidatePC
-            //respuesta == true, respuesta ==false o respuesta == empty
 
             for (Classifier classifier : posInstanceToClassify) {
                 String pResult = classifier.classifyAlloyInstance(candidatePC).toString();
@@ -110,7 +107,7 @@ public class ClassifierServiceImpl extends ClassifierServiceGrpc.ClassifierServi
             responseObserver.onError(e);
             return;
         }
-        //formato de String? 
+
         String result = "pos_pass= " + posPass +"\n neg_reject= " + negReject + "\n pos_fail= " + posFail +" \n neg_fail= " + negFail + " \n total=" + total;
 
         ClassifyResponse response = ClassifyResponse.newBuilder()
