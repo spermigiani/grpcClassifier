@@ -20,8 +20,15 @@ classifier_pb2_grpc.py exist in this directory.
 
 import argparse
 import sys
+import subprocess
+from typing import List
 
 import grpc
+import re
+
+# Program parameters that must be referenced
+# in every candidate expression.
+PROGRAM_PARAMS = ("s", "elem", "out")
 
 try:
     import classifier_pb2
@@ -38,9 +45,12 @@ except ImportError:
 
 
 DEFAULT_ADDRESS = "localhost:50051"
-DEFAULT_TIMEOUT_SECONDS = 10.0
+DEFAULT_TIMEOUT_SECONDS = 600
+DEFAULT_FANDANGO_BIN = "/opt/anaconda3/bin/fandango"
 
-
+# --------------------------------------------------------------------------
+# gRPC call
+# --------------------------------------------------------------------------
 def classify(text: str, address: str = DEFAULT_ADDRESS,
              timeout: float = DEFAULT_TIMEOUT_SECONDS) -> "classifier_pb2.ClassifyResponse":
     """Sends `text` to the ClassifierService and returns the response message."""
@@ -50,59 +60,48 @@ def classify(text: str, address: str = DEFAULT_ADDRESS,
         return stub.Classify(request, timeout=timeout)
 
 
-def parse_args(argv=None):
-    parser = argparse.ArgumentParser(
-        description="Validate a spec string against the ClassifierService gRPC server."
-    )
-    parser.add_argument(
-        "text",
-        nargs="?",
-        help="Text to validate. If omitted, it is read from stdin.",
-    )
-    parser.add_argument(
-        "--address",
-        default=DEFAULT_ADDRESS,
-        help=f"Server address as host:port (default: {DEFAULT_ADDRESS})",
-    )
-    parser.add_argument(
-        "--timeout",
-        type=float,
-        default=DEFAULT_TIMEOUT_SECONDS,
-        help=f"RPC timeout in seconds (default: {DEFAULT_TIMEOUT_SECONDS})",
-    )
-    parser.add_argument(
-        "--quiet",
-        action="store_true",
-        help="Only print the final result string, no extra detail.",
-    )
-    return parser.parse_args(argv)
-
-
-def main(argv=None) -> int:
-    args = parse_args(argv)
-
-    text = args.text
-    if text is None:
-        text = sys.stdin.read() # .strip()
-
-    if not text:
-        sys.stderr.write("No input text provided (arg or stdin).\n")
-        return 2
-
+def maximize_fitness(candidate_pc: str) -> int:
     try:
-        response = classify(text, address=args.address, timeout=args.timeout)
-    except grpc.RpcError as e:
-        sys.stderr.write(f"gRPC call failed: {e.code()} - {e.details()}\n")
-        return 3
 
-    if args.quiet:
-        print(response.result)
-    else:
-        print(f"Input:    {text!r}")
-        print(f"Result:   {response.result}")
+        if not candidate_pc:
+            sys.stderr.write("No input text provided (arg or stdin).\n")
+            return -1
+        try:
+            response = classify(candidate_pc, address=DEFAULT_ADDRESS, timeout=DEFAULT_TIMEOUT_SECONDS)
+        except grpc.RpcError as e:
+            sys.stderr.write(f"gRPC call failed: {e.code()} - {e.details()}\n")
+            return -1
 
-    return 0 
+        result = response.result
+        if not result: # result.returncode != 0:
+            print("No result returned from server.")
+            return 0
+
+        #output = result.strip()
+
+        pos_pass_m = re.search(r'pos_pass=\s*(\d+)', result)
+        neg_reject_m = re.search(r'neg_reject=\s*(\d+)', result)
+        total_m = re.search(r'total=\s*(\d+)', result)
+        pos_fail_m = re.search(r'pos_fail=\s*(\d+)', result)
+        neg_fail_m = re.search(r'neg_fail=\s*(\d+)', result)
+
+        if not (pos_pass_m and neg_reject_m and total_m and pos_fail_m and neg_fail_m):
+            print("Could not parse result string:", result)
+            return 0
+
+        pos_pass = int(pos_pass_m.group(1))
+        neg_reject = int(neg_reject_m.group(1))
+        total = int(total_m.group(1))
+        pos_fail = int(pos_fail_m.group(1))
+        neg_fail = int(neg_fail_m.group(1))
+        print(f"pos_pass={pos_pass}, neg_reject={neg_reject}")
+
+        # Reward specifications that pass all positive instances and reject all negative instances.
+        return pos_pass + neg_reject
+
+    except Exception as e:
+        return 0
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+    
+
